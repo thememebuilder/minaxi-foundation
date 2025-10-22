@@ -11,6 +11,12 @@ Add SEO meta + favicon
 
 Add Contact Form (Formspree)
 
+custom domain minaxifoundation.org or .in 
+
+connect via vercel DNS
+
+Add email via Google Workspace or Zoho mail 
+
 Our Impact - live stats (volunteers, beneficieris, projects completed)
 
 Stories section - simple blog posts
