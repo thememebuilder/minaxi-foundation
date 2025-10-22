@@ -4,7 +4,7 @@ export default function Footer() {
       <div className="container">
         © {new Date().getFullYear()} Minaxi Foundation · Registered NGO ·
         <br />
-        <a href="mailto:hello@minaxi.org">hello@minaxi.org</a>
+        <a href="mailto:jugalvaidya@gmail.com">hello@minaxi.org</a>
       </div>
     </footer>
   )

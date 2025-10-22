@@ -1,13 +1,11 @@
-export default function NavBar() {
+export default function Section({ id, title, children, alt = false }) {
   return (
-    <nav className="nav">
-      <div style={{fontWeight:700}}>Minaxi Foundation</div>
-      <div>
-        <a href="#mission">Mission</a>
-        <a href="#programs">Programs</a>
-        <a href="#donate">Donate</a>
-        <a href="#contact">Contact</a>
+    <section id={id} className={`section${alt ? ' alt' : ''}`}>
+      <div className="container">
+        {title && <h2>{title}</h2>}
+        <div>{children}</div>
       </div>
-    </nav>
+    </section>
   )
 }
+
