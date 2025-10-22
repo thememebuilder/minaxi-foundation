@@ -1,8 +1,12 @@
 import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react'
 
-// CHANGE <your-username> below when you set up the repo URL, or keep base as shown if repo name is minaxi-foundation
+// On Vercel, process.env.VERCEL is defined.
+// On GitHub Pages, it's not, so we keep the repo subpath.
+const isVercel = !!process.env.VERCEL
+
 export default defineConfig({
   plugins: [react()],
-  base: '/minaxi-foundation/',
+  base: isVercel ? '/' : '/minaxi-foundation/',
 })
+
