@@ -239,3 +239,45 @@ a:hover { text-decoration: underline; }
   text-align: center;
   font-size: 14px;
 }
+
+/* Forms */
+.form {
+  display: grid;
+  gap: 14px;
+  max-width: 560px;
+}
+.field {
+  display: grid;
+  gap: 6px;
+}
+.field label {
+  font-weight: 700;
+}
+.field input,
+.field textarea {
+  width: 100%;
+  padding: 12px 14px;
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  font: inherit;
+  background: #fff;
+  transition: border-color .2s ease, box-shadow .2s ease;
+}
+.field input:focus,
+.field textarea:focus {
+  border-color: var(--accent);
+  box-shadow: 0 0 0 4px var(--accent-light);
+  outline: none;
+}
+.form-success {
+  margin-top: 6px;
+  font-weight: 600;
+  color: #166534; /* green-800 */
+}
+.form-error {
+  margin-top: 6px;
+  font-weight: 600;
+  color: #991b1b; /* red-800 */
+}
+/* honeypot field hidden */
+.hp { position: absolute; left: -5000px; }

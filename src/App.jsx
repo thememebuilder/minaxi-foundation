@@ -1,6 +1,7 @@
 import Section from './components/Section'
 import NavBar from './components/NavBar'
 import Footer from './components/Footer'
+import ContactForm from './components/ContactForm'
 import './styles.css'
 
 export default function App() {
@@ -84,13 +85,11 @@ export default function App() {
 
       {/* CONTACT */}
       <Section id="contact" title="Contact">
-        <p>
-          Email: <a href="mailto:hello@minaxi.org">hello@minaxi.org</a><br/>
-          Address: Add your registered address here.<br/>
-          Social: <a href="#" aria-disabled>Twitter</a> · <a href="#" aria-disabled>LinkedIn</a>
+        <p style={{ marginBottom: 16 }}>
+          Prefer email? <a href="mailto:jugalvaidya@gmail.com">hello@minaxi.org</a>
         </p>
+        <ContactForm />
       </Section>
-
       <Footer />
     </>
   )
