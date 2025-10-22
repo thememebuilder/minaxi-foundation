@@ -1,4 +1,12 @@
 
+# Vercel Deployment
+
+https://minaxi-foundation.vercel.app
+
+# GitHub Deployment
+
+https://thememebuilder.github.io/minaxi-foundation
+
 # Folder Structure
 
 minaxi-foundation/
