@@ -1,4 +1,31 @@
 
+# To Dos
+
+Add Google Font + adjust color palette
+
+Improve navbar & hero CTA
+
+Add Mission & Programs icons or emoji bullets
+
+Add SEO meta + favicon
+
+Add Contact Form (Formspree)
+
+custom domain minaxifoundation.org or .in 
+
+connect via vercel DNS
+
+Add email via Google Workspace or Zoho mail 
+
+Our Impact - live stats (volunteers, beneficieris, projects completed)
+
+Stories section - simple blog posts
+
+Integrate a donation payment flow via Razorpay or Stripe
+
+Multi-Language support (Englsih + Hindi) using react-i18next
+
+
 # Vercel Deployment
 
 https://minaxi-foundation.vercel.app
