@@ -2,7 +2,7 @@ export default function NavBar() {
   return (
     <nav className="nav">
       <div className="brand">
-        <img src="public/logo.png" alt="" width="24" height="24" aria-hidden="true" />
+        <img src="public/logo.png" alt="" loading="lazy" decoding="async" width="24" height="24" aria-hidden="true" />
         <span>Minaxi Foundation</span>
       </div>
       <div>
