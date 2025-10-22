@@ -65,10 +65,10 @@ export default function App() {
       <Section alt={false} title="Partners & Supporters">
         <div className="partners" aria-label="Partner logos">
           {/* Replace these placeholders with real partner logos when available */}
-          <div className="partner"><img src="public/partners/partner-a.svg" alt="Partner A" /></div>
-          <div className="partner"><img src="public/partners/partner-b.svg" alt="Partner B" /></div>
-          <div className="partner"><img src="public/partners/partner-c.svg" alt="Partner C" /></div>
-          <div className="partner"><img src="public/partners/partner-d.svg" alt="Partner D" /></div>
+          <div className="partner"><img src="public/partners/partner-a.svg" alt="Partner A" loading="lazy" decoding="async" width="160" height="40"/></div>
+          <div className="partner"><img src="public/partners/partner-b.svg" alt="Partner B" loading="lazy" decoding="async" width="160" height="40"/></div>
+          <div className="partner"><img src="public/partners/partner-c.svg" alt="Partner C" loading="lazy" decoding="async" width="160" height="40"/></div>
+          <div className="partner"><img src="public/partners/partner-d.svg" alt="Partner D" loading="lazy" decoding="async" width="160" height="40"/></div>
         </div>
       </Section>
 
