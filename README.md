@@ -1,3 +1,14 @@
+# lighthouse check
+
+npm run lhci
+
+npm i -g lighthouse
+# Serve your production build (don’t audit the dev server!)
+npm run build
+npx serve dist  # or: npx http-server dist
+# In another terminal, run lighthouse:
+lighthouse http://localhost:3000 --view --only-categories=performance,accessibility,seo,best-practices
+
 
 # To Dos
 

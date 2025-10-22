@@ -1,0 +1,23 @@
+name: Lighthouse CI
+
+on:
+  push:
+    branches: [ "main" ]
+  pull_request:
+  workflow_dispatch:
+
+jobs:
+  lhci:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Run Lighthouse CI on production
+        uses: treosh/lighthouse-ci-action@v12
+        with:
+          configPath: .lighthouserc.json
+          # If you want to pass URLs here instead of config, you could:
+          # urls: |
+          #   https://minaxi-foundation.vercel.app/
+          temporaryPublicStorage: true
