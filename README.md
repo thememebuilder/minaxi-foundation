@@ -1,15 +1,15 @@
 
 # To Dos
 
-Add Google Font + adjust color palette
+Add Google Font + adjust color palette (Done)
 
-Improve navbar & hero CTA
+Improve navbar & hero CTA (Done)
 
-Add Mission & Programs icons or emoji bullets
+Add Mission & Programs icons or emoji bullets (Done)
 
-Add SEO meta + favicon
+Add SEO meta + favicon (Done)
 
-Add Contact Form (Formspree)
+Add Contact Form (Formspree) (Done)
 
 custom domain minaxifoundation.org or .in 
 
@@ -25,6 +25,11 @@ Integrate a donation payment flow via Razorpay or Stripe
 
 Multi-Language support (Englsih + Hindi) using react-i18next
 
+Update Form : Add a subject dropdown (Volunteer / Donation / Partnership) → include name="topic" in the form
+
+Add reCAPTCHA in Formspree settings if spam starts.
+
+Track form submits with a tiny event (e.g., Plausible/Umami) later
 
 # Vercel Deployment
 
