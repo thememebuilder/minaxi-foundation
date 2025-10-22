@@ -16,7 +16,7 @@ export default function App() {
             Minaxi Foundation supports education, health, and livelihood initiatives
             in underserved communities. Transparent. Local-first. Impact-driven.
           </p>
-          <a className="btn" href="#donate">Donate Now</a>
+          <a className="btn-primary" href="#donate">Donate Now</a>
         </div>
       </header>
 
