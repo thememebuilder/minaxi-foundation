@@ -1,0 +1,69 @@
+[
+  {
+    "name": "minScore",
+    "expected": 0.98,
+    "actual": 0.96,
+    "values": [
+      0.96,
+      0.96,
+      0.96
+    ],
+    "operator": ">=",
+    "passed": false,
+    "auditProperty": "accessibility",
+    "auditId": "categories",
+    "level": "warn",
+    "url": "https://minaxi-foundation.vercel.app/"
+  },
+  {
+    "name": "maxNumericValue",
+    "expected": 2500,
+    "actual": 11443.758,
+    "values": [
+      11447.640000000003,
+      2217.7439999999997,
+      11443.758
+    ],
+    "operator": "<=",
+    "passed": false,
+    "auditId": "largest-contentful-paint",
+    "level": "error",
+    "url": "https://minaxi-foundation.vercel.app/",
+    "auditTitle": "Largest Contentful Paint",
+    "auditDocumentationLink": "https://developer.chrome.com/docs/lighthouse/performance/lighthouse-largest-contentful-paint/"
+  },
+  {
+    "name": "maxNumericValue",
+    "expected": 1800,
+    "actual": 2939.6209999999996,
+    "values": [
+      3247.3559999999998,
+      2217.7439999999997,
+      2939.6209999999996
+    ],
+    "operator": "<=",
+    "passed": false,
+    "auditId": "first-contentful-paint",
+    "level": "warn",
+    "url": "https://minaxi-foundation.vercel.app/",
+    "auditTitle": "First Contentful Paint",
+    "auditDocumentationLink": "https://developer.chrome.com/docs/lighthouse/performance/first-contentful-paint/"
+  },
+  {
+    "name": "maxNumericValue",
+    "expected": 250000,
+    "actual": 1950686,
+    "values": [
+      1950703,
+      1950717,
+      1950686
+    ],
+    "operator": "<=",
+    "passed": false,
+    "auditId": "total-byte-weight",
+    "level": "warn",
+    "url": "https://minaxi-foundation.vercel.app/",
+    "auditTitle": "Avoids enormous network payloads",
+    "auditDocumentationLink": "https://developer.chrome.com/docs/lighthouse/performance/total-byte-weight/"
+  }
+]

@@ -1,3 +1,6 @@
+# lighthouse check
+
+npm run lhci
 
 # To Dos
 
