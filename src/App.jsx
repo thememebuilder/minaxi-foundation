@@ -1,96 +1,51 @@
-import Section from './components/Section'
+import { useEffect } from 'react'
 import NavBar from './components/NavBar'
 import Footer from './components/Footer'
-import ContactForm from './components/ContactForm'
+import HomePage from './pages/Home'
+import MissionPage from './pages/Mission'
+import ProgramsPage from './pages/Programs'
+import PartnersPage from './pages/Partners'
+import DonatePage from './pages/Donate'
+import ContactPage from './pages/Contact'
+import { usePathname } from './router'
 import './styles.css'
 
+const ROUTES = {
+  '/': HomePage,
+  '/mission': MissionPage,
+  '/programs': ProgramsPage,
+  '/partners': PartnersPage,
+  '/donate': DonatePage,
+  '/contact': ContactPage,
+}
+
 export default function App() {
+  const path = usePathname()
+
+  useEffect(() => {
+    window.scrollTo({ top: 0, behavior: 'smooth' })
+  }, [path])
+
+  const ActivePage = ROUTES[path] || NotFoundPage
+
   return (
-    <>
-      <NavBar />
-
-      {/* HERO */}
-      <header className="hero">
-        <div className="container-wide">
-          <h1>Empowering Communities with Compassion & Action</h1>
-          <p>
-            Minaxi Foundation supports education, health, and livelihood initiatives
-            in underserved communities. Transparent. Local-first. Impact-driven.
-          </p>
-          <a className="btn-primary" href="#donate">Donate Now</a>
-        </div>
-      </header>
-
-      {/* TRUST / CREDIBILITY */}
-      <Section alt>
-        <div className="trustbar">
-          <div className="badges" aria-label="Credibility badges">
-            {/* Replace with your real statuses when ready */}
-            <span className="badge" title="Registered NGO">Registered NGO</span>
-            <span className="badge" title="Tax Exemption">80G Eligible</span>
-            <span className="badge" title="Compliance">12A Compliant</span>
-            <span className="badge" title="Transparency">Annual Report</span>
-          </div>
-        </div>
-      </Section>
-
-      {/* MISSION with bullet points */}
-      <Section id="mission" title="Our Mission">
-        <ul className="list">
-          <li>Educate children in rural and underserved areas.</li>
-          <li>Support women-led livelihoods with skills and micro-grants.</li>
-          <li>Improve local healthcare access through preventive programs.</li>
-        </ul>
-      </Section>
-
-      {/* PROGRAMS (unchanged) */}
-      <Section id="programs" title="Programs" alt>
-        <div className="cards">
-          <div className="card">
-            <h3>Education</h3>
-            <p>Scholarships, school supplies, and mentoring to keep children learning.</p>
-          </div>
-          <div className="card">
-            <h3>Health</h3>
-            <p>Preventive health camps, nutrition support, and awareness drives.</p>
-          </div>
-          <div className="card">
-            <h3>Livelihood</h3>
-            <p>Skill training and micro-grants for small, sustainable businesses.</p>
-          </div>
-        </div>
-      </Section>
-
-      {/* PARTNERS (logos) */}
-      <Section alt={false} title="Partners & Supporters">
-        <div className="partners" aria-label="Partner logos">
-          {/* Replace these placeholders with real partner logos when available */}
-          <div className="partner"><img src="public/partners/partner-a.svg" alt="Partner A" loading="lazy" decoding="async" width="160" height="40"/></div>
-          <div className="partner"><img src="public/partners/partner-b.svg" alt="Partner B" loading="lazy" decoding="async" width="160" height="40"/></div>
-          <div className="partner"><img src="public/partners/partner-c.svg" alt="Partner C" loading="lazy" decoding="async" width="160" height="40"/></div>
-          <div className="partner"><img src="public/partners/partner-d.svg" alt="Partner D" loading="lazy" decoding="async" width="160" height="40"/></div>
-        </div>
-      </Section>
-
-      {/* DONATE */}
-      <Section id="donate" title="Donate" alt>
-        <p>
-          Your contribution directly funds verified field projects. Until payment
-          is integrated, use the contact details below to pledge support.
-        </p>
-        <p>
-          <a className="btn" href="#contact">Pledge Support</a>
-        </p>
-      </Section>
-
-      {/* CONTACT */}
-      <Section id="contact" title="Contact">
-        <p style={{ marginBottom: 16 }}>
-          Prefer email? <a href="mailto:jugalvaidya@gmail.com">hello@minaxi.org</a>
-        </p>
-        <ContactForm />
-      </Section>
+    <div className="app-shell">
+      <NavBar currentPath={path} />
+      <main className="page">
+        <ActivePage />
+      </main>
       <Footer />
-    </>
+    </div>
+  )
+}
+
+function NotFoundPage() {
+  return (
+    <section className="section">
+      <div className="container-wide glass-panel">
+        <h2>Page not found</h2>
+        <p>The page you are looking for does not exist. Please use the navigation to continue.</p>
+      </div>
+    </section>
   )
 }
